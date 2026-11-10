@@ -1,21 +1,21 @@
 # Portfolio de Belén Merino Rodríguez
 
-Primera versión visual del portfolio personal, preparada para GitHub Pages.
+Nueva versión visual del portfolio personal, preparada para GitHub Pages.
 
 ## Archivos
 - `index.html`: contenido y estructura.
-- `styles.css`: colores, tipografía, diseño adaptable y animaciones/transiciones.
+- `styles.css`: colores, tipografía, diseño adaptable y animaciones sutiles.
 - `script.js`: menú móvil y año automático.
 
-## Publicarlo en GitHub Pages
-1. Crea un repositorio en GitHub llamado `TU-USUARIO.github.io` (sustituye TU-USUARIO por tu nombre de usuario de GitHub).
-2. Sube los tres archivos (`index.html`, `styles.css` y `script.js`) a la raíz del repositorio.
-3. En GitHub, entra en **Settings → Pages**.
-4. En **Build and deployment**, selecciona **Deploy from a branch**, elige `main` y `/ (root)`, y guarda.
-5. Cuando termine la publicación, tu web estará en `https://TU-USUARIO.github.io/`.
+## Publicación
+1. Descomprime este paquete.
+2. Sube `index.html`, `styles.css` y `script.js` a la raíz del repositorio `Belen-ds.github.io`, sustituyendo los archivos anteriores.
+3. Si GitHub pregunta, confirma el commit.
+4. GitHub Pages actualizará la web automáticamente.
 
-## Personalización posterior
-Puedes cambiar textos en `index.html` y colores en las variables de la parte superior de `styles.css`.
-Los proyectos y enlaces de contacto están preparados para completarse más adelante.
+No cambies la configuración de Pages si ya está publicada desde `main` y `/ (root)`.
 
-Esta es una primera maqueta: los textos, herramientas y secciones son editables y no pretenden afirmar experiencia o conocimientos que aún no hayas añadido.
+## Personalización
+El texto de «Sobre mí» es una primera propuesta editable. Puedes ajustarlo para que refleje mejor tu historia y tus intereses.
+
+- `portada-abstracta.png`: imagen original de portada.
