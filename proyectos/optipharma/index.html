@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Optipharma: proyecto de Data Science para la predicción de demanda y optimización del stock farmacéutico.">
+  <meta name="theme-color" content="#111d34">
+  <title>Optipharma | Belén Merino Rodríguez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .case-hero { padding:95px 0 65px; }
+    .case-hero h1 { max-width:900px; margin:16px 0; }
+    .case-lead { max-width:780px; color:var(--muted); font-size:1.08rem; line-height:1.8; }
+    .case-meta { display:flex; flex-wrap:wrap; gap:9px; margin-top:25px; }
+    .case-meta span { border:1px solid var(--line); border-radius:99px; padding:7px 12px; color:#c9c0f7; font-size:.72rem; }
+    .case-section { padding:55px 0; border-top:1px solid var(--line); }
+    .case-section h2 { margin:10px 0 18px; }
+    .case-copy { max-width:850px; color:var(--muted); }
+    .case-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:28px; }
+    .case-card { padding:23px; border:1px solid var(--line); border-radius:13px; background:rgba(34,49,75,.45); }
+    .case-card h3 { margin:0 0 9px; font-size:1rem; }
+    .case-card p, .case-card li { color:var(--muted); font-size:.88rem; }
+    .case-card ul { padding-left:19px; margin-bottom:0; }
+    .architecture { margin:28px 0 0; padding:12px; border:1px solid var(--line); border-radius:14px; background:#f3f5fa; }
+    .architecture img { width:100%; height:auto; display:block; border-radius:7px; }
+    .architecture figcaption { color:#53627c; font-size:.75rem; padding:10px 5px 2px; }
+    .notice { margin-top:22px; padding:17px 19px; border-left:3px solid var(--violet); border-radius:0 9px 9px 0; background:rgba(170,150,244,.08); color:var(--muted); font-size:.86rem; }
+    .case-back { display:inline-block; margin-top:28px; }
+    @media(max-width:700px){ .case-hero{padding:65px 0 45px}.case-grid{grid-template-columns:1fr}.case-section{padding:42px 0} }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html#inicio" aria-label="Ir al inicio">BM</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="../../index.html#sobre-mi">Sobre mí</a>
+      <a href="../../index.html#proyectos">Proyectos</a>
+      <a class="nav-cta" href="../../index.html#contacto">Contacto <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="case-hero section-wrap">
+      <p class="eyebrow"><span class="status-dot"></span> CASO DE ESTUDIO · DATA SCIENCE</p>
+      <h1>Optipharma</h1>
+      <p class="case-lead">Predicción de demanda y optimización del stock farmacéutico. Un proyecto que integra datos históricos de la farmacia y fuentes externas para anticipar necesidades de reposición y apoyar las decisiones de inventario.</p>
+      <div class="case-meta"><span>Python</span><span>pandas</span><span>NumPy</span><span>XGBoost</span><span>scikit-learn</span><span>FastAPI</span><span>Docker Compose</span></div>
+      <a class="text-link case-back" href="../../index.html#proyectos">← Volver a proyectos</a>
+    </section>
+
+    <section class="case-section">
+      <div class="section-wrap">
+        <div class="section-kicker">01 / EL RETO</div>
+        <h2>Anticipar la demanda para decidir mejor</h2>
+        <p class="case-copy">La gestión del inventario farmacéutico debe equilibrar la disponibilidad de productos con el coste de mantener existencias. Las roturas de stock pueden traducirse en ventas perdidas y falta de disponibilidad, mientras que el exceso de inventario puede inmovilizar capital y aumentar el riesgo de caducidad. Optipharma plantea una solución predictiva para pasar de una gestión reactiva a una planificación basada en datos.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-wrap">
+        <div class="section-kicker">02 / DATOS Y VARIABLES</div>
+        <h2>Una visión más completa de la demanda</h2>
+        <p class="case-copy">El proyecto combina información interna de la farmacia con señales externas que pueden aportar contexto sobre la evolución de la demanda.</p>
+        <div class="case-grid">
+          <article class="case-card"><h3>Datos internos</h3><ul><li>Histórico de ventas procedente del ERP</li><li>Información de productos y stock</li><li>Calendario y estacionalidad</li></ul></article>
+          <article class="case-card"><h3>Fuentes externas</h3><ul><li>Google Trends</li><li>Datos meteorológicos de AEMET</li><li>Datos de ocupación hospitalaria</li></ul></article>
+        </div>
+        <p class="case-copy" style="margin-top:20px">La presentación del proyecto recoge un histórico de 1,1 millones de registros y la integración de variables para enriquecer la predicción.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-wrap">
+        <div class="section-kicker">03 / PREPARACIÓN Y MODELIZACIÓN</div>
+        <h2>Del dato al modelo predictivo</h2>
+        <div class="case-grid">
+          <article class="case-card"><h3>Preparación de datos</h3><p>Limpieza, transformación y unificación de las fuentes. El proceso contempla la creación de variables derivadas, como retardos, medias móviles y medidas de variabilidad.</p></article>
+          <article class="case-card"><h3>Modelo de Machine Learning</h3><p>Se utiliza XGBoost para estimar la demanda. El planteamiento incorpora una función de pérdida asimétrica para dar mayor importancia al coste de determinados errores de predicción.</p></article>
+          <article class="case-card"><h3>Entrenamiento</h3><p>La documentación del proyecto describe un reentrenamiento mensual mediante una ventana deslizante de 15 meses.</p></article>
+          <article class="case-card"><h3>Evaluación</h3><p>La evaluación combina métricas de error con variables de negocio y analiza el comportamiento del stock y el impacto económico de las predicciones.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-wrap">
+        <div class="section-kicker">04 / ARQUITECTURA</div>
+        <h2>Una solución conectada de principio a fin</h2>
+        <p class="case-copy">La arquitectura organiza la entrada y preparación de datos, el motor analítico y una aplicación con frontend web y backend mediante API. Los resultados contemplan la predicción de demanda, el cálculo de stock mínimo y la generación de información para la reposición.</p>
+        <figure class="architecture">
+          <img src="../../assets/optipharma-arquitectura.png" alt="Diagrama de flujo de Optipharma con fuentes externas e internas, preparación de datos, modelo predictivo, Docker Compose, frontend, backend y resultados">
+          <figcaption>Diagrama de arquitectura y flujo de datos de Optipharma</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-wrap">
+        <div class="section-kicker">05 / RESULTADOS Y APLICACIÓN</div>
+        <h2>De la predicción a la decisión de inventario</h2>
+        <p class="case-copy">La salida operativa del proyecto es una estimación de demanda que ayuda a calcular el stock mínimo por artículo y preparar un fichero de reposición. También se contempla el backtesting de la lógica de inventario para analizar su comportamiento.</p>
+        <div class="case-grid">
+          <article class="case-card"><h3>Predicción de demanda</h3><p>Estimación de la demanda para apoyar la planificación de existencias.</p></article>
+          <article class="case-card"><h3>Stock mínimo</h3><p>Conversión de la demanda prevista en una referencia para la reposición de productos.</p></article>
+          <article class="case-card"><h3>Backtesting</h3><p>Simulación del comportamiento de la estrategia de inventario y análisis de sus resultados.</p></article>
+          <article class="case-card"><h3>Salida descargable</h3><p>Generación de resultados en CSV para facilitar su consulta y uso operativo.</p></article>
+        </div>
+        <div class="notice"><strong>Nota sobre los datos:</strong> la presentación indica que los datos de la demostración son ficticios y que las unidades y los valores absolutos se han adaptado. Los porcentajes del backtest se describen como representativos de los resultados obtenidos. Por ello, esta página no presenta cifras absolutas como resultados reales.</div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer section-wrap">
+    <span>© <span id="year"></span> Belén Merino Rodríguez</span>
+    <span>Hecho con curiosidad y datos</span>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Volver arriba ↑</a>
+  </footer>
+  <script src="../../script.js"></script>
+</body>
+</html>

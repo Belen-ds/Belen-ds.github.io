@@ -1,21 +1,20 @@
 # Portfolio de Belén Merino Rodríguez
 
-Nueva versión visual del portfolio personal, preparada para GitHub Pages.
-
-## Archivos
-- `index.html`: contenido y estructura.
-- `styles.css`: colores, tipografía, diseño adaptable y animaciones sutiles.
-- `script.js`: menú móvil y año automático.
+Web estática preparada para GitHub Pages.
 
 ## Publicación
-1. Descomprime este paquete.
-2. Sube `index.html`, `styles.css` y `script.js` a la raíz del repositorio `Belen-ds.github.io`, sustituyendo los archivos anteriores.
-3. Si GitHub pregunta, confirma el commit.
-4. GitHub Pages actualizará la web automáticamente.
 
-No cambies la configuración de Pages si ya está publicada desde `main` y `/ (root)`.
+1. Descomprime el ZIP.
+2. Sube el contenido de la carpeta `portfolio_belen_merino_v2` a la raíz del repositorio `Belen-ds.github.io`, en la rama `main`.
+3. Mantén la estructura de carpetas, especialmente `assets/` y `proyectos/optipharma/`.
+4. GitHub Pages publicará la página principal y el caso de estudio de Optipharma.
 
-## Personalización
-El texto de «Sobre mí» es una primera propuesta editable. Puedes ajustarlo para que refleje mejor tu historia y tus intereses.
+## Estructura
 
-- `portada-abstracta.png`: imagen original de portada.
+- `index.html`: página principal.
+- `styles.css`: estilos compartidos.
+- `script.js`: comportamiento del menú y elementos de la portada.
+- `assets/optipharma-arquitectura.png`: diagrama de arquitectura del proyecto.
+- `proyectos/optipharma/index.html`: página de caso de estudio.
+
+No se incluyen archivos privados, bases de datos ni el proyecto ejecutable. Revisa que todo el material publicado sea apto para difusión pública.
