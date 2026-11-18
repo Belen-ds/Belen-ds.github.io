@@ -27,9 +27,11 @@
     .architecture { margin:28px 0 0; padding:12px; border:1px solid var(--line); border-radius:14px; background:#f3f5fa; }
     .architecture img { width:100%; height:auto; display:block; border-radius:7px; }
     .architecture figcaption { color:#53627c; font-size:.75rem; padding:10px 5px 2px; }
-    .backtest-figures { display:grid; grid-template-columns:1fr; gap:22px; margin-top:28px; }
-    .backtest-figure { margin:0; padding:12px; border:1px solid var(--line); border-radius:14px; background:rgba(34,49,75,.45); }
-    .backtest-figure img { display:block; width:100%; height:auto; border-radius:7px; }
+    .backtest-figures { display:grid; grid-template-columns:1fr; justify-items:center; gap:18px; margin-top:28px; }
+    .backtest-figure { width:100%; max-width:860px; margin:0 auto; padding:10px; border:1px solid var(--line); border-radius:14px; background:rgba(34,49,75,.45); }
+    .backtest-image-link { display:block; border-radius:7px; overflow:hidden; cursor:zoom-in; }
+    .backtest-image-link:focus-visible { outline:2px solid var(--cyan); outline-offset:4px; }
+    .backtest-figure img { display:block; width:100%; max-height:490px; height:auto; object-fit:contain; border-radius:7px; }
     .backtest-figure figcaption { color:var(--muted); font-size:.78rem; padding:11px 5px 2px; }
     .notice { margin-top:22px; padding:17px 19px; border-left:3px solid var(--violet); border-radius:0 9px 9px 0; background:rgba(170,150,244,.08); color:var(--muted); font-size:.86rem; }
     .case-back { display:inline-block; margin-top:28px; }
@@ -114,11 +116,11 @@
         </div>
         <div class="backtest-figures">
           <figure class="backtest-figure">
-            <img src="backtesting-pagina-7.png" alt="Página original 7 de la presentación Optipharma: resultados de stock mínimo y backtesting">
+            <a class="backtest-image-link" href="backtesting-pagina-7.png" target="_blank" rel="noopener" aria-label="Abrir ampliada la página 7 del backtesting"><img src="backtesting-pagina-7.png" alt="Página original 7 de la presentación Optipharma: resultados de stock mínimo y backtesting"></a>
             <figcaption>Stock mínimo y backtesting · Presentación original, página 7</figcaption>
           </figure>
           <figure class="backtest-figure">
-            <img src="backtesting-pagina-8.png" alt="Página original 8 de la presentación Optipharma: resultados de stock mínimo y backtesting">
+            <a class="backtest-image-link" href="backtesting-pagina-8.png" target="_blank" rel="noopener" aria-label="Abrir ampliada la página 8 del backtesting"><img src="backtesting-pagina-8.png" alt="Página original 8 de la presentación Optipharma: resultados de stock mínimo y backtesting"></a>
             <figcaption>Stock mínimo y backtesting · Presentación original, página 8</figcaption>
           </figure>
         </div>
