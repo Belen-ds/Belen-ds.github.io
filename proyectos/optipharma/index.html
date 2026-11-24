@@ -27,11 +27,16 @@
     .architecture { margin:28px 0 0; padding:12px; border:1px solid var(--line); border-radius:14px; background:#f3f5fa; }
     .architecture img { width:100%; height:auto; display:block; border-radius:7px; }
     .architecture figcaption { color:#53627c; font-size:.75rem; padding:10px 5px 2px; }
-    .backtest-figures { display:grid; grid-template-columns:1fr; gap:22px; margin-top:28px; }
-    .backtest-figure { margin:0; padding:12px; border:1px solid var(--line); border-radius:14px; background:rgba(34,49,75,.45); }
-    .backtest-figure img { display:block; width:100%; height:auto; border-radius:7px; }
+    .backtest-figures { display:grid; grid-template-columns:1fr; justify-items:center; gap:18px; margin-top:28px; }
+    .backtest-figure { width:min(100%,860px); margin:0; padding:10px; border:1px solid var(--line); border-radius:14px; background:rgba(34,49,75,.45); }
+    .lightbox-trigger { display:block; width:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
+    .backtest-figure img { display:block; width:100%; max-height:490px; height:auto; object-fit:contain; border-radius:7px; }
     .backtest-figure figcaption { color:var(--muted); font-size:.78rem; padding:11px 5px 2px; }
-    .notice { margin-top:22px; padding:17px 19px; border-left:3px solid var(--violet); border-radius:0 9px 9px 0; background:rgba(170,150,244,.08); color:var(--muted); font-size:.86rem; }
+    .image-lightbox { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; padding:5vh 5vw; background:rgba(5,10,20,.88); }
+    .image-lightbox.is-open { display:flex; }
+    .image-lightbox img { display:block; max-width:100%; max-height:90vh; width:auto; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 18px 70px rgba(0,0,0,.45); }
+    .lightbox-close { position:absolute; top:18px; right:22px; width:44px; height:44px; border:1px solid rgba(255,255,255,.35); border-radius:50%; background:rgba(17,29,52,.8); color:#fff; font-size:1.8rem; line-height:1; cursor:pointer; }
+
     .case-back { display:inline-block; margin-top:28px; }
     @media(max-width:700px){ .case-hero{padding:65px 0 45px}.case-grid{grid-template-columns:1fr}.case-section{padding:42px 0} }
   </style>
@@ -114,18 +119,21 @@
         </div>
         <div class="backtest-figures">
           <figure class="backtest-figure">
-            <img src="backtesting-pagina-7.png" alt="Página original 7 de la presentación Optipharma: resultados de stock mínimo y backtesting">
+            <button class="lightbox-trigger" type="button" aria-label="Ampliar imagen de backtesting, página 7"><img src="backtesting-pagina-7.png" alt="Página original 7 de la presentación Optipharma: resultados de stock mínimo y backtesting"></button>
             <figcaption>Stock mínimo y backtesting · Presentación original, página 7</figcaption>
           </figure>
           <figure class="backtest-figure">
-            <img src="backtesting-pagina-8.png" alt="Página original 8 de la presentación Optipharma: resultados de stock mínimo y backtesting">
+            <button class="lightbox-trigger" type="button" aria-label="Ampliar imagen de backtesting, página 8"><img src="backtesting-pagina-8.png" alt="Página original 8 de la presentación Optipharma: resultados de stock mínimo y backtesting"></button>
             <figcaption>Stock mínimo y backtesting · Presentación original, página 8</figcaption>
           </figure>
         </div>
-        <div class="notice">Datos ficticios con fines demostrativos. Las unidades y los valores absolutos se han adaptado, pero los porcentajes obtenidos en el backtest son representativos de los resultados alcanzados al aplicar el modelo.</div>
       </div>
     </section>
   </main>
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen ampliada">×</button>
+    <img src="" alt="">
+  </div>
   <footer class="footer section-wrap">
     <span>© <span id="year"></span> Belén Merino Rodríguez</span>
     <span>Hecho con curiosidad y datos</span>
